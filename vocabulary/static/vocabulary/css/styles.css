@@ -1,0 +1,42 @@
+.main {
+    background: #f5f5dc;
+}
+
+header.page-header {
+    background: orange;
+    height: 50px;
+
+    align-items: center;
+}
+
+header.page-header>h1 {
+    color: black;
+    text-align: center;
+}
+
+
+.content {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.container ul {
+    text-align: center;
+    list-style: none;
+}
+
+.container li {
+    display: inline-block;
+}
+
+.link-button {
+    width: 400px;
+}
+
+.text-size {
+    height: 60px;
+}
+

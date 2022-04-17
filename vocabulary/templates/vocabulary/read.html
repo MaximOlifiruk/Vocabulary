@@ -1,0 +1,28 @@
+{% extends 'vocabulary/base.html' %}
+
+
+
+{% block read %}
+
+{% if words.count > 0 %}
+<h2 class="font-weight-bold">Все слова</h2>
+<font size="6">
+    <table class="table table-bordered">
+        <thead>
+            <th>Слово</th>
+            <th>Перевод слова</th>
+            <th></th>
+        </thead>
+        {% for word in words %}
+        <tr>
+            <td>{{ word.word }} </td>
+            <td>{{ word.translation }}</td>
+            <td><a href="edit/{{word.id}}" class="btn btn-info">Изменить</a> | <a href="delete/{{word.id}}" class="btn btn-danger">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</font>
+
+{% endif %}
+
+{% endblock %}

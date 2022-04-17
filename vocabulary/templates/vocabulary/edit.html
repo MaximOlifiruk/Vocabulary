@@ -1,0 +1,17 @@
+{% extends 'vocabulary/base.html' %}
+
+
+{% block edit %}
+<form method="POST">
+    {% csrf_token %}
+    <p>
+        <label>Введите слово</label><br>
+        <input type="text" name="word" value="{{edit_word.word}}" />
+    </p>
+    <p>
+        <label>Введите перевод слова</label><br>
+        <input type="text" name="translation" value="{{edit_word.translation}}" />
+    </p>
+    <input type="submit" value="Сохранить" class="btn btn-success">
+</form>
+{% endblock %}
